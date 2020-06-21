@@ -1,0 +1,104 @@
+void main() {
+  /*
+  print('hello');
+  
+ //Static variables:
+ int age = 30;
+ print (age);
+  
+  String name = 'haim sabag';
+    print(name);
+  //wrong -> name = 30
+  
+  bool isNight = false;
+  print(isNight);
+  
+  dynamic myname = 'haim sabag';
+    print(myname);
+  
+  myname = 30;
+  print(myname);
+   */
+  
+  /*
+  //functions printing:
+  String greet = greeting();
+  int age = getAge();
+  print(age);
+  print(greet);
+  */
+  
+  /*
+  //List:
+  List<String> names = ['abba','haim','chani', 'moishi'];
+  
+  print(names);
+  //add remove ite,s from List
+  names.add('shulamit');
+  names.add('yaakov');
+   print(names);
+  names.remove('abba');
+  print(names);
+  */
+
+  //create User Object:
+  User userOne = User('moishi', 10);
+  print(userOne.usarName);
+  print(userOne.age);
+  User userTwo = User('shulamit', 6);
+  print(userTwo.usarName);
+  print(userTwo.age);
+  
+  SuperUser userThree = SuperUser('Haim', 34);
+  print(userThree.usarName);
+  userThree.publish();
+  userThree.login();
+}
+
+  
+  
+//functions
+/*
+String greeting(){
+  return 'hello';
+}*/
+/*
+int getAge(){
+  return 34;
+}*/
+
+String greeting() => 'hello';
+int getAge() => 34;
+
+
+class User {
+  
+  String usarName;
+  int age;
+  
+  //Constructor:
+  User(String usarName, int age){
+    this.usarName = usarName;
+    this.age = age;
+  }
+  
+   void login(){
+     print('user logged in');
+   }
+}
+
+class SuperUser extends User{
+  SuperUser(String userName, int age) : super(userName, age);
+    
+  void publish(){
+    print('published updated');
+  }
+}
+
+
+
+
+
+
+
+
